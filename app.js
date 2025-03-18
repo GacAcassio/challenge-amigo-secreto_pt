@@ -24,3 +24,15 @@ function atualizarLista() {
         lista.appendChild(li);
     });
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Adicione pelo menos um amigo para sortear.");
+        return;
+    }
+
+    const sorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>O amigo sorteado é: <strong>${sorteado}</strong></li>`;
+}
